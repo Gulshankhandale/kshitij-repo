@@ -26,7 +26,13 @@ console.log(status)
 const addRest=()=>{
 
 axios.post(`http://localhost:3000/addrestaurant`,{
-  name,address,cc,phone,ot,ct,status
+  name:name,
+  address: address,
+  country_code : cc,
+  phone: phone,
+  open_time: ot,
+  close_time: ct,
+  status: status
 })
 
   // axios.post("http://localhost:3000/addrestaurant").then((res)=>{
