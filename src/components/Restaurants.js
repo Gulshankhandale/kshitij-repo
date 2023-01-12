@@ -108,7 +108,7 @@ console.warn(restList)
               
               <div>
               <Link className="btn btn-primary" to={`/editrestaurant/${item.id}`}>EDIT</Link>
-              <Link onClick={handleDelete(item.id)} className="btn btn-danger">DELETE</Link>
+              <Link onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">DELETE</Link>
               </div>
 
               </td>
