@@ -13,13 +13,7 @@ const AddRest = (props) => {
   const [ct, setCt] = useState('')
   const [status, setStatus] = useState('')
 
-console.log(name)
-console.log(address)
-console.log(cc)
-console.log(phone)
-console.log(ot)
-console.log(ct)
-console.log(status)
+
 
 // =========================================== ADD RESTAURANT ================================================================
 
