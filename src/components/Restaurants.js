@@ -39,17 +39,16 @@ function getOneRest(id){
     console.log("*Restaurants* CANNOT FETCH RESTAURANT!!")
   })
 }
+  
+  function handleDelete(id){
+    axios.delete(`http://localhost:3000/deleterestaurent/${id}`)
+    .then((res)=>{
+      alert(res.data)
+    }).catch((err)=>{
+      console.log("Something went wrong")
+    })
+  }
 
-// =========================================== DELETE RESTAURANT =============================================================
-
-// function delRest(id){
-//   axios.delete(`http://localhost:3000/deleterestaurant/${id}`).then((res)=>{
-//     console.log(res.data)
-    
-//   }).catch((err)=>{
-//     console.log("*Restaurants* NOT DELETED!!")
-//   })
-// }
 
 console.warn(restList)
 
@@ -109,7 +108,7 @@ console.warn(restList)
               
               <div>
               <Link className="btn btn-primary" to={`/editrestaurant/${item.id}`}>EDIT</Link>
-              <Link /*onClick={delRest(item.id)}*/ className="btn btn-danger" to="/deleterestaurant">DELETE</Link>
+              <Link onClick={handleDelete(item.id)} className="btn btn-danger">DELETE</Link>
               </div>
 
               </td>
