@@ -20,6 +20,13 @@ const EditRest = (props) => {
         axios.get(`http://localhost:3000/restaurent/${rest_id}`)
         .then((res)=>(
             console.log(res.data)
+            setName(res.data.name)
+            setAddress(res.data.address)
+            setCountryCode(res.data.country_code)
+            setPhone(res.data.phone)
+            setOpenTime(res.data.open_time)
+            setCloseTime(res.data.close_time)
+            setStatus(res.data.status)
         )).catch((err)=>{
             console.log("Something went wrong")
         })
